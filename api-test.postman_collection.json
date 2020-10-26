@@ -1,0 +1,844 @@
+{
+	"info": {
+		"_postman_id": "02c5df8d-9838-4ef9-9699-2ee48532f525",
+		"name": "api-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "获取应用列表（PRO）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0c0d82fa-2c4a-475e-ab14-47b1cc66ab1c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"true\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/ChannelCategorys",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ChannelCategorys"
+					]
+				},
+				"description": "弃用的"
+			},
+			"response": []
+		},
+		{
+			"name": "获取群列表（pro）",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "38022870-e4aa-4587-a054-21b122217a2f",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"true\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/ChannelCategorys/20/Channels",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"ChannelCategorys",
+						"20",
+						"Channels"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "获取职位群列表",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "__RequestVerificationToken=3gdjBIAtXuefr32NrL7mOo7aPoEER6HHIbK1TND3qyZHs3jWEXvRCNTK_ffO7eEEp-ZMKqHoCUXjk2y3un7dVVZ0zCw1; UPASessionId=324872c8-145c-41c2-be08-2b9a44c86c71; .LieBiDeAuth=-26mYp25psV_ucRH5TWJRj4mxb7DQC3_fdwPeV8mV3ZMwMYxWKvORotzBs-lb0edZJ-cQoNfEidMiACYzgRLGgjXXOxvrDl0Btkq0wrcPp2hmZkwVC3Q5QYeNltbvQMoA1PkV_3mHkEmMdM1YVbEtmjk3pwNpf_RhdEWSL-UnVVT16ip9IduvIdGGFOp_y7VvRMtiJ3tUneSDO0HqITqUevJLqkyO226H4YKLHGEU94Rblxt4JjOyH1SzsjlvLuQODbMIvRLUYnV70lYCsk6dW9AJsG3cFgztK5XGl--WriH3JP4x3tpoHqlJmL6sEpcP_toc3WXuFHsnSdSkgtKxkna44Aar9epsr1gEbFOOrqukSBXEtx9djy7_0fWgxlHmWuMum6SewqwuRi5Whm-ewuaHYU-PlofunXWLjjJLyT1oqLg6yfrjK0nIfAvYv7a--Y2IxVvq8FO9iKMn47Mfp_wUOlJ1jjQ4JkB9306wFDVy0rU; LatestLoginedDate=2018-08-15; _ga=GA1.1.a83c0366-a433-47ac-b6e8-2db5b96e67b3; _gid=GA1.1.1529353264.1534150569; Hm_lvt_34a6434d46a009fe8be51621c402c62f=1533550324,1533798824,1533882774,1534298203; Hm_lpvt_34a6434d46a009fe8be51621c402c62f=1534301838; _gat=1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:17984/ChannelCategorys/20/Channels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "17984",
+							"path": [
+								"ChannelCategorys",
+								"20",
+								"Channels"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Length",
+							"value": "96036",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "frame-ancestors 'self' http://www.growingio.com",
+							"name": "Content-Security-Policy",
+							"description": "Custom header"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Aug 2018 08:08:10 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "RequestId",
+							"value": "a93d0376-61f9-45c9-ba38-5564e916038b",
+							"name": "RequestId",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-AspNetMvc-Version",
+							"value": "5.2",
+							"name": "X-AspNetMvc-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpc5bel5L2cXEdpdFxXZWJTaXRlXOeMjuW/heW+l1xsaWViaWRlLnBvcnRhbC5kZXZcaW1wbGVtZW50YXRpb25cc3JjXEJhemEuTGllQmlEZS5Qb3J0YWxcQ2hhbm5lbENhdGVnb3J5c1wyMFxDaGFubmVscw==?=",
+							"name": "X-SourceFiles",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "2018-08-15",
+							"key": "LatestLoginedDate"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "CMvzQhoNbTPKYvjLXA5uewKEHtr8MkN0TaglkHK9LLcIqzMfi7MMkDEiK77YIlt39BHxqN7oYMmJttdWZpl2WfWkJsxd5ihHS3mvkT0dkwG63UtYF2-8tnrzo1QC0Zw98Uzoyru-cMKszCy84tMjz0ZTHoqnsCSfqnBtTPck1C0NMdJiKqtuoQiUHHy1CFf0LDT5HC9FFL0Ag8T5eN--qKJ00_5lUFsCqs_m1Y8d-aJkKcApOpoTlD9HE63ZWU2iBjV5S2xQVXoqB3ds-ESstB4afxvQhI54Kk-K825W4GleZ4sb03swhh3IbObcy3L-H0KSgSZM-FBOj8D5m4HMeG7hmrqk_kY1wotCo_7JmBpZ0XHzwWv_LRf8uHQDU1lvS6bCwlzB1X-2XSmVuu7n5qSU4wYAvQb7MwfHLdKJemnqmdG5RMHgtq3FhtYnln3UThBm_A4EMTk2VrC8azKk5dHmp-mTTcRF9GATGRVsUreY_eKK",
+							"key": ".LieBiDeAuth"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "824fe370-4173-4a25-af66-64cabaf2ec62",
+							"key": "UPASessionId"
+						}
+					],
+					"body": "{\"data\":[{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a93c028d-4871-48cc-a2aa-1f9a07a4043c\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a93c028d-4871-48cc-a2aa-1f9a07a4043c\",\"channelName\":\"产品经理-百度\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 21:18:47\",\"latestMessage\":\"test\",\"lastReadTime\":\"2018-08-15 11:11:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-14 11:53:33\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a87203c0-22c7-459b-bc49-6dc55c96b427\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a87203c0-22c7-459b-bc49-6dc55c96b427\",\"channelName\":\"职位3-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:39:36\",\"latestMessage\":\"大家好！\",\"lastReadTime\":\"2018-08-15 11:11:02\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-24 17:28:44\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a93c027f-9a84-4482-aa06-a49cf9db8b68\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a93c027f-9a84-4482-aa06-a49cf9db8b68\",\"channelName\":\"java开发-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 11:38:38\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-15 11:10:39\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-14 11:38:38\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"杭州市\",\"jobUrl\":\"/Job/a8c80302-83d5-497f-926e-85325db1c723\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c80302-83d5-497f-926e-85325db1c723\",\"channelName\":\"会计员-审计\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 11:06:57\",\"latestMessage\":\"345345\",\"lastReadTime\":\"2018-08-15 11:10:41\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-20 14:01:36\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a93b044d-3201-49b8-8bd4-20072bbc9325\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a93b044d-3201-49b8-8bd4-20072bbc9325\",\"channelName\":\"java开发-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 20:02:48\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-15 11:10:41\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-13 20:02:48\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8e103f9-4ddf-4819-89d7-4cec62322951\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8e103f9-4ddf-4819-89d7-4cec62322951\",\"channelName\":\"web-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 17:04:15\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-15 11:10:51\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-15 18:31:10\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a93b038a-f916-4491-b8b6-565ff24bb1fb\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a93b038a-f916-4491-b8b6-565ff24bb1fb\",\"channelName\":\"java开发-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:30:39\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-15 11:10:50\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-13 16:30:39\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a93b0387-c126-4f1e-a9b6-4bf69b3c0376\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a93b0387-c126-4f1e-a9b6-4bf69b3c0376\",\"channelName\":\"产品经理-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:27:08\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-15 11:10:59\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-13 16:27:08\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8be0392-0336-4e09-9432-d0883c67406c\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be0392-0336-4e09-9432-d0883c67406c\",\"channelName\":\"(内部职位)程序员鼓励师 - 3879(内部职位)程序员鼓励师 - 3879(内部职位)程序员鼓励师 - 3879(内部职位)程序员鼓励师 - 3879-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:21:48\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-14 11:04:06\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:38:20\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8cb0255-2ea9-4296-a612-2129088c8344\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cb0255-2ea9-4296-a612-2129088c8344\",\"channelName\":\"移交鼓励师 - 7441-子部门02\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:21:32\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-14 11:18:12\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-23 10:52:17\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a86903e9-f194-4f55-8ace-b03408aa5ed7\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a86903e9-f194-4f55-8ace-b03408aa5ed7\",\"channelName\":\"移交2-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:13:57\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-14 11:04:12\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 18:14:24\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8d0032d-b05f-4a91-ada0-3174ebcc2bfd\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8d0032d-b05f-4a91-ada0-3174ebcc2bfd\",\"channelName\":\"话费干活-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 16:13:40\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-14 11:18:11\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-28 14:48:46\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8da0426-dcec-446b-b30f-04f73696bf8a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8da0426-dcec-446b-b30f-04f73696bf8a\",\"channelName\":\"开发 经理-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":2,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 15:52:32\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-08 19:20:56\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8eb0361-a6e2-489a-bb8e-b8bb705a7a8f\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8eb0361-a6e2-489a-bb8e-b8bb705a7a8f\",\"channelName\":\"IBM java开发-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":2,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 15:52:15\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-25 15:45:31\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a938036f-d0ba-46d2-b473-24e5c22382e9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a938036f-d0ba-46d2-b473-24e5c22382e9\",\"channelName\":\"算法工程师-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":1,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 13:48:56\",\"latestMessage\":\"[候选人链接]\",\"lastReadTime\":\"2018-08-10 18:44:32\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-10 16:01:00\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a8f503b1-5ea0-467b-bb38-0e22c35c0705\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f503b1-5ea0-467b-bb38-0e22c35c0705\",\"channelName\":\"UI-IBM-子部门\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-09 16:52:04\",\"latestMessage\":\"30\",\"lastReadTime\":\"2018-08-15 11:11:04\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-06-04 17:12:35\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a92a035b-43db-47e3-8d56-22f1195bbdaf\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a92a035b-43db-47e3-8d56-22f1195bbdaf\",\"channelName\":\"职位频道测试01-APP\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":true,\"latestMessageTime\":\"2018-07-31 18:19:29\",\"latestMessage\":\"WHY\",\"lastReadTime\":\"2018-08-15 11:11:11\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-07-27 15:38:33\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a90e03c4-8601-4523-9af7-da69776b7762\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a90e03c4-8601-4523-9af7-da69776b7762\",\"channelName\":\"testbug-APP\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-25 13:40:32\",\"latestMessage\":\"[图片]\",\"lastReadTime\":\"2018-08-15 11:11:15\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-06-29 17:33:31\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-bfba-4d53-be86-408697765992\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a83c0366-bfba-4d53-be86-408697765992\",\"channelName\":\"软件开发工程师 - 27-蜘蛛网络\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-24 18:09:58\",\"latestMessage\":\"test\",\"lastReadTime\":\"2018-08-15 16:07:06\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8f20257-de6f-4b2b-9080-e3a33a59efc1\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f20257-de6f-4b2b-9080-e3a33a59efc1\",\"channelName\":\"设计师-审计\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-17 14:21:17\",\"latestMessage\":\"宛海：[Offer]\",\"lastReadTime\":\"2018-08-15 11:11:30\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-06-01 10:55:14\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a90e03ca-55f1-4c19-b2ca-3a2dd4823a0d\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a90e03ca-55f1-4c19-b2ca-3a2dd4823a0d\",\"channelName\":\"testbug-APP\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-17 13:52:30\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-15 11:11:27\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-06-29 17:39:52\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a920029c-139f-49de-995a-8950c7da2ed4\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a920029c-139f-49de-995a-8950c7da2ed4\",\"channelName\":\"职位消息测试-IBM-子部门\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-17 13:45:28\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-08-15 11:11:32\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-07-17 12:09:43\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8dc0340-9924-415e-a8dc-52df472d95d4\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8dc0340-9924-415e-a8dc-52df472d95d4\",\"channelName\":\"UIT-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-07-04 18:42:05\",\"latestMessage\":\"常宁*-*13900139005_13：[HR反馈提醒]\",\"lastReadTime\":\"2018-08-15 11:11:34\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-10 15:09:25\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8f50364-e342-44ef-bb77-5b1291afa0fb\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f50364-e342-44ef-bb77-5b1291afa0fb\",\"channelName\":\"算法工程师-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-06-04 15:49:04\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-07-02 12:19:44\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-06-04 15:49:04\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8f103ba-487c-4da6-bd62-a1fd8a485c15\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f103ba-487c-4da6-bd62-a1fd8a485c15\",\"channelName\":\"审核师-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-31 17:22:20\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-14 11:35:39\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-31 17:22:20\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8f103ae-e532-4d7b-93a9-9302bd1de4c5\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f103ae-e532-4d7b-93a9-9302bd1de4c5\",\"channelName\":\"JAVA-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-31 17:09:55\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-14 11:18:08\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-31 17:09:55\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8f10243-0fb9-4bc7-a510-cf830c2852e9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8f10243-0fb9-4bc7-a510-cf830c2852e9\",\"channelName\":\"testtest-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-31 10:32:30\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-08 14:40:32\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-31 10:32:30\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8960315-154e-4da1-bdbd-658a467935c4\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8960315-154e-4da1-bdbd-658a467935c4\",\"channelName\":\"职位状态测试-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-15 17:49:11\",\"latestMessage\":\"常宁*-*13900139005_13：[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-01 14:21:53\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8cf0434-d2c6-42a2-b3f5-62751b53c84d\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cf0434-d2c6-42a2-b3f5-62751b53c84d\",\"channelName\":\"WEB-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-10 15:03:52\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"2018-06-04 15:28:17\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-27 19:36:11\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8d40315-c771-4a01-9f88-64574dfde723\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8d40315-c771-4a01-9f88-64574dfde723\",\"channelName\":\"测试开发工程师-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-05-02 14:22:39\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-10 16:59:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-05-02 14:22:39\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8d0031b-7fbb-48f8-98c0-2b0c7a51e952\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8d0031b-7fbb-48f8-98c0-2b0c7a51e952\",\"channelName\":\"(内部职位)程序员鼓励师 - 6135-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-28 14:28:53\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-10 16:36:18\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-28 14:28:53\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8d00316-7288-444b-936b-fa249108aacc\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8d00316-7288-444b-936b-fa249108aacc\",\"channelName\":\"(内部职位)程序员鼓励师 - 7097-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-28 14:23:23\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-28 14:23:23\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"杭州市\",\"jobUrl\":\"/Job/a8cf0234-730b-4b98-8b04-b88f0792a6bc\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cf0234-730b-4b98-8b04-b88f0792a6bc\",\"channelName\":\"密码器-nana创建1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-27 19:38:35\",\"latestMessage\":\"萝卜头：[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-27 10:16:31\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"武汉市\",\"jobUrl\":\"/Job/a8c8035b-0f42-4c6a-9d42-08cb5586e522\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c8035b-0f42-4c6a-9d42-08cb5586e522\",\"channelName\":\"财务主管-1-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 20:38:02\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":7,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-20 15:38:20\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c289-4077-9707-a063ac732ecf\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c289-4077-9707-a063ac732ecf\",\"channelName\":\"(内部职位)软件开发工程师 - 24-Alibaba3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 20:32:41\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c24a-468e-aabe-2096ce914dda\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c24a-468e-aabe-2096ce914dda\",\"channelName\":\"(内部职位)程序员鼓励师 - 22-IBM-子部门\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 20:12:11\",\"latestMessage\":\"小猎助手：[Offer提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c075-43c3-be0b-02ee06c591a0\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c075-43c3-be0b-02ee06c591a0\",\"channelName\":\"(内部职位)程序员鼓励师 - 4-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 20:09:51\",\"latestMessage\":\"听丝：[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8cb0315-7254-4422-9dcf-5b9adf304a40\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cb0315-7254-4422-9dcf-5b9adf304a40\",\"channelName\":\"D助理 - 6924-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 19:48:54\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-23 14:22:18\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8ce043c-e47a-491e-bec3-80f168a0a3d1\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8ce043c-e47a-491e-bec3-80f168a0a3d1\",\"channelName\":\"开发1-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 19:48:24\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-26 19:45:01\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c003cc-9e42-43fc-b38e-96526c2adee2\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a8c003cc-9e42-43fc-b38e-96526c2adee2\",\"channelName\":\"2018.04.12-八爪网络总部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 19:45:29\",\"latestMessage\":\"萝卜头：[HR反馈提醒]\",\"lastReadTime\":\"2018-06-08 12:48:01\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-12 17:42:23\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8ce0311-4bcb-4d8e-924c-d345bc6e565a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8ce0311-4bcb-4d8e-924c-d345bc6e565a\",\"channelName\":\"清洁人员-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-26 14:17:45\",\"latestMessage\":\"银魂：[加入频道]\",\"lastReadTime\":\"2018-07-27 15:24:02\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-26 14:17:45\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8cd039e-a773-4da1-b92f-d74ff77f1e10\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cd039e-a773-4da1-b92f-d74ff77f1e10\",\"channelName\":\"ium-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-25 16:52:10\",\"latestMessage\":\"凌珊：[发布职位]\",\"lastReadTime\":\"2018-06-08 12:47:58\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-25 16:52:10\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"杭州市\",\"jobUrl\":\"/Job/a8cd0389-a531-4c07-bb95-c9d95638c896\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cd0389-a531-4c07-bb95-c9d95638c896\",\"channelName\":\"当当- 4982-nana创建1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-25 16:29:13\",\"latestMessage\":\"凌珊：[发布职位]\",\"lastReadTime\":\"2018-06-08 12:47:56\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-25 16:29:13\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8cb0333-501a-46ad-ac75-085b6949ddf9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8cb0333-501a-46ad-ac75-085b6949ddf9\",\"channelName\":\"(内部职位)程序员鼓励师 - 2590-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-23 14:54:54\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-23 14:54:54\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8930344-6b13-419b-b504-063b50115825\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8930344-6b13-419b-b504-063b50115825\",\"channelName\":\"(内部职位)程序员鼓励师 - 6451-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-23 13:51:10\",\"latestMessage\":\"小猎助手：[面试反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-26 15:13:36\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"广州市\",\"jobUrl\":\"/Job/a8c803e8-637b-49ae-8165-ef8aa344fcb9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c803e8-637b-49ae-8165-ef8aa344fcb9\",\"channelName\":\"设计师 - 1-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-20 18:12:41\",\"latestMessage\":\"宛海：[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-20 18:12:41\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c803e6-f582-471d-9188-cc033f26aa0e\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c803e6-f582-471d-9188-cc033f26aa0e\",\"channelName\":\"测试工程 - 1-APP部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-20 18:11:09\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-20 18:11:08\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c8027e-3271-4a88-a8cd-f9e9e01bf238\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c8027e-3271-4a88-a8cd-f9e9e01bf238\",\"channelName\":\"财务会计-审计\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-20 15:45:49\",\"latestMessage\":\"白儿：[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-20 11:37:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c60248-9ed1-44f6-971a-f61703392460\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c60248-9ed1-44f6-971a-f61703392460\",\"channelName\":\"34534545345345353454534534345534535354686654564564535434534535434534534534534534-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-18 10:38:33\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-18 10:38:33\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c60247-d297-4c79-99ac-ca3aee79a170\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c60247-d297-4c79-99ac-ca3aee79a170\",\"channelName\":\"(内部职位)程序员鼓励师 - 118-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-18 10:37:41\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-18 10:37:41\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c60247-8fe1-4c59-8c46-5aa4db226ea1\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c60247-8fe1-4c59-8c46-5aa4db226ea1\",\"channelName\":\"(内部职位)程序员鼓励师 - 323-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-18 10:37:24\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-18 10:37:24\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c60247-4b46-4131-9abb-129e86a83a84\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c60247-4b46-4131-9abb-129e86a83a84\",\"channelName\":\"(内部职位)程序员鼓励师 - 4-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-18 10:37:06\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-18 10:37:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c60246-fbaf-4cd4-ba53-b29ab21c69c6\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c60246-fbaf-4cd4-ba53-b29ab21c69c6\",\"channelName\":\"(内部职位)程序员鼓励师 - 6597-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-18 10:36:47\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-18 10:36:47\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a891026d-60e9-4024-b0b3-4c16886e68a9\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a891026d-60e9-4024-b0b3-4c16886e68a9\",\"channelName\":\"猎企发布测试2-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-17 15:53:18\",\"latestMessage\":\"听丝：[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-24 11:18:42\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8c5027e-77b5-4055-a232-e7401e42ba01\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c5027e-77b5-4055-a232-e7401e42ba01\",\"channelName\":\"离职交接zsq001-阿里巴巴1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-17 11:37:26\",\"latestMessage\":\"如蕾：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-17 11:37:26\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a8c40325-2a90-4814-ad3b-099029d434e1\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8c40325-2a90-4814-ad3b-099029d434e1\",\"channelName\":\"(内部职位)程序员鼓励师 - 8029离职交接01-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-16 14:39:28\",\"latestMessage\":\"宏博：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-16 14:39:28\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8be03dc-a296-4096-9fdb-c44b96608587\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be03dc-a296-4096-9fdb-c44b96608587\",\"channelName\":\"(内部职位)程序员鼓励师 - 815-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 17:59:51\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 17:59:51\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8be03c7-14f8-49ae-ae53-90ca1f92b223\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be03c7-14f8-49ae-ae53-90ca1f92b223\",\"channelName\":\"(内部职位)程序员鼓励师 - 3853-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 17:36:18\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 17:36:18\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8be03b0-ff35-4712-83ab-6ff64b7e7855\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be03b0-ff35-4712-83ab-6ff64b7e7855\",\"channelName\":\"(内部职位)程序员鼓励师 - 8773-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 17:12:11\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 17:12:11\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8be0395-b73e-4bf4-a05e-f32ee3e0a5b3\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be0395-b73e-4bf4-a05e-f32ee3e0a5b3\",\"channelName\":\"(内部职位)程序员鼓励师 - 1085-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 16:42:23\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:42:23\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8be0394-affa-4ba2-b3e0-bd8ac066aa69\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be0394-affa-4ba2-b3e0-bd8ac066aa69\",\"channelName\":\"(内部职位)程序员鼓励师 - 5039-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 16:41:16\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:41:16\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8be0393-bc9f-45f3-993b-256ce386f0d8\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be0393-bc9f-45f3-993b-256ce386f0d8\",\"channelName\":\"(内部职位)程序员鼓励师 - 5066-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 16:40:13\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:40:13\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8be0390-656b-4bcf-bd1f-61c08db40c9c\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be0390-656b-4bcf-bd1f-61c08db40c9c\",\"channelName\":\"11111111122222222222222228811111181111111111111111111112222222221122111111222222222222222111111222222222221111111111111111111111-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 16:36:34\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:36:34\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8be038a-cd76-4998-9c2f-b54386ce9bbb\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8be038a-cd76-4998-9c2f-b54386ce9bbb\",\"channelName\":\"(内部职位)程序员鼓励师 - 3902-子部门3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-10 16:30:29\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-10 16:30:29\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bd03d0-c82d-49ce-85b7-2bfa13b5ab3e\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bd03d0-c82d-49ce-85b7-2bfa13b5ab3e\",\"channelName\":\"creatorid(离职测试001)-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-09 17:46:54\",\"latestMessage\":\"宏博：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-09 17:46:54\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bd03cf-5c18-4e13-acab-95ac1d0bb0b0\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bd03cf-5c18-4e13-acab-95ac1d0bb0b0\",\"channelName\":\"00000000000000-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-09 17:45:22\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-09 17:45:22\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a8bd0313-3398-412c-9bbc-9c2456847ca8\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bd0313-3398-412c-9bbc-9c2456847ca8\",\"channelName\":\"离职交接测试02-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-09 14:19:50\",\"latestMessage\":\"宏博：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-09 14:19:50\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a8bd0311-e23e-4a07-ad5c-7eb41a920986\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bd0311-e23e-4a07-ad5c-7eb41a920986\",\"channelName\":\"离职交接测试0409（01）-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-09 14:18:25\",\"latestMessage\":\"宏博：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-09 14:18:24\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bd0234-cdb3-406c-a019-cb92b4fca551\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bd0234-cdb3-406c-a019-cb92b4fca551\",\"channelName\":\"(内部职位)程序员鼓励师 - 7341-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-09 10:16:55\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-09 10:16:55\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bc036c-c951-4c21-833a-b830fb9c6b86\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036c-c951-4c21-833a-b830fb9c6b86\",\"channelName\":\"(内部职位)程序员鼓励师 - 8386-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:57:41\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:57:41\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"西安市\",\"jobUrl\":\"/Job/a8bc036c-0352-4dca-97c0-24a87e5d60c5\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036c-0352-4dca-97c0-24a87e5d60c5\",\"channelName\":\"(内部职位)程序员鼓励师 - 2281-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:56:50\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:56:50\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"西安市\",\"jobUrl\":\"/Job/a8bc036b-d84a-4db0-b3a1-4210e71607df\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036b-d84a-4db0-b3a1-4210e71607df\",\"channelName\":\"(内部职位)程序员鼓励师 - 8672-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:56:39\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:56:39\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"西安市\",\"jobUrl\":\"/Job/a8bc036b-bc27-4e3a-9567-3e99f86a1ac8\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036b-bc27-4e3a-9567-3e99f86a1ac8\",\"channelName\":\"(内部职位)程序员鼓励师 - 4999-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:56:32\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:56:32\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"西安市\",\"jobUrl\":\"/Job/a8bc036b-6e73-4574-8e7b-92a46d3f35b5\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036b-6e73-4574-8e7b-92a46d3f35b5\",\"channelName\":\"(内部职位)程序员鼓励师 - 5278-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:56:12\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:56:12\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"西安市\",\"jobUrl\":\"/Job/a8bc036a-e135-4eb6-89d1-8aa072d6f486\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc036a-e135-4eb6-89d1-8aa072d6f486\",\"channelName\":\"(内部职位)程序员鼓励师 - 3791-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:55:36\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:55:36\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"长沙市\",\"jobUrl\":\"/Job/a8bc0368-deda-4151-9e2a-9fac776bbd8c\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0368-deda-4151-9e2a-9fac776bbd8c\",\"channelName\":\"(内部职位)程序员鼓励师 - 4383-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:53:24\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:53:24\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"长沙市\",\"jobUrl\":\"/Job/a8bc0368-b72d-4eb2-9eeb-0797fc733b6a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0368-b72d-4eb2-9eeb-0797fc733b6a\",\"channelName\":\"(内部职位)程序员鼓励师 - 2945-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:53:14\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:53:14\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"长沙市\",\"jobUrl\":\"/Job/a8bc0368-8d7d-420e-9a44-924ef3670498\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0368-8d7d-420e-9a44-924ef3670498\",\"channelName\":\"(内部职位)程序员鼓励师 - 5094-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:53:03\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:53:03\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"长沙市\",\"jobUrl\":\"/Job/a8bc0368-63eb-4b38-b176-116a37fdfcd7\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0368-63eb-4b38-b176-116a37fdfcd7\",\"channelName\":\"(内部职位)程序员鼓励师 - 5304-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:52:53\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:52:53\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8bc0367-0523-4077-a6b8-56e696ac7d41\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0367-0523-4077-a6b8-56e696ac7d41\",\"channelName\":\"(内部职位)程序员鼓励师 - 7521-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:51:23\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:51:23\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"北京市\",\"jobUrl\":\"/Job/a8bc0366-97d2-4d27-a26d-39304ba9b5a9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0366-97d2-4d27-a26d-39304ba9b5a9\",\"channelName\":\"(内部职位)程序员鼓励师 - 7889-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:50:55\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:50:55\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bc035e-bba1-4275-8326-45a6c27a7e42\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc035e-bba1-4275-8326-45a6c27a7e42\",\"channelName\":\"(内部职位)程序员鼓励师 - 5886-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:42:20\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:42:20\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bc035e-5814-4cbe-8ee7-690e226ec44d\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc035e-5814-4cbe-8ee7-690e226ec44d\",\"channelName\":\"(内部职位)程序员鼓励师 - 5949-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:41:54\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:41:54\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"苏州市\",\"jobUrl\":\"/Job/a8bc035c-4d4d-4a57-8068-522ae90f673c\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc035c-4d4d-4a57-8068-522ae90f673c\",\"channelName\":\"(内部职位)程序员鼓励师 - 6847-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:39:40\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:39:40\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"厦门市\",\"jobUrl\":\"/Job/a8bc035b-dba5-4f0e-999f-fd95579741b5\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc035b-dba5-4f0e-999f-fd95579741b5\",\"channelName\":\"(内部职位)程序员鼓励师 - 8522-子部门02\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:39:11\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:39:11\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8bc035a-c784-44ce-a365-34a15b1cba41\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc035a-c784-44ce-a365-34a15b1cba41\",\"channelName\":\"(内部职位)程序员鼓励师 - 463-部门01\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:38:01\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:38:01\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"苏州市\",\"jobUrl\":\"/Job/a8bc0358-96c8-480e-bddc-8ba037e6ee40\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8bc0358-96c8-480e-bddc-8ba037e6ee40\",\"channelName\":\"(内部职位)程序员鼓励师 - 2767-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-08 15:35:38\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-08 15:35:38\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8b8027b-4188-4b89-8fca-313eef2c3b75\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8b8027b-4188-4b89-8fca-313eef2c3b75\",\"channelName\":\"0404-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-04 11:33:53\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-04 11:33:53\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8b604a3-7d9e-4344-a949-b4b6d39b4721\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8b604a3-7d9e-4344-a949-b4b6d39b4721\",\"channelName\":\"11111111111111111111-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-02 21:37:03\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-02 21:37:03\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8b604a1-586a-46e6-9bd1-9d54b34f9899\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8b604a1-586a-46e6-9bd1-9d54b34f9899\",\"channelName\":\"wilson.zhang-阿里巴巴14\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-04-02 21:34:48\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-08-01 15:44:15\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-04-02 21:34:48\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8900258-fffc-48ab-9806-f30a414d6251\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8900258-fffc-48ab-9806-f30a414d6251\",\"channelName\":\"2018.02.23-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-29 21:52:17\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":5,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-23 10:56:28\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8af031d-213c-426b-9e45-738b92ce8b71\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8af031d-213c-426b-9e45-738b92ce8b71\",\"channelName\":\"产品经理呀-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-26 14:30:41\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-26 14:30:41\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a89b0397-35e7-44c3-9ff2-e01a82e9384e\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a89b0397-35e7-44c3-9ff2-e01a82e9384e\",\"channelName\":\"职位111-公司2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":2,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-06 16:44:01\",\"latestMessage\":\"银魂：[加入频道]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-06 16:44:01\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a89b0387-7e16-4a61-8202-26087bc17fc9\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a89b0387-7e16-4a61-8202-26087bc17fc9\",\"channelName\":\"职位0000-公司2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":1,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-06 16:26:52\",\"latestMessage\":\"银魂：[发布职位]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-06 16:26:52\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8960245-4d06-4be8-868f-b66687e8b149\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8960245-4d06-4be8-868f-b66687e8b149\",\"channelName\":\"高级测试工程师-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-01 10:34:56\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-01 10:34:56\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a896023a-46f9-4e72-842d-3d75caeaf327\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a896023a-46f9-4e72-842d-3d75caeaf327\",\"channelName\":\"运营经理-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-03-01 10:22:54\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-03-01 10:22:54\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8950455-48f1-4831-baef-e5f648286e14\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8950455-48f1-4831-baef-e5f648286e14\",\"channelName\":\"产品经理-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-28 20:11:38\",\"latestMessage\":\"[候选人链接]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-28 20:11:38\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c289-4b9d-a043-143c3d923f34\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c289-4b9d-a043-143c3d923f34\",\"channelName\":\"(内部职位)程序员鼓励师 - 24-阿里巴巴19\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-28 18:59:53\",\"latestMessage\":\"小猎助手：[推进面试提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8950392-4aa4-4052-b0c8-363d3a080d40\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8950392-4aa4-4052-b0c8-363d3a080d40\",\"channelName\":\"(内部职位)程序员鼓励师 - 2698-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-28 16:38:39\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-28 16:38:39\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8950350-9c46-4560-a370-a12d89914f84\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8950350-9c46-4560-a370-a12d89914f84\",\"channelName\":\"(内部职位)程序员鼓励师 - 5578-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-28 15:26:54\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-28 15:26:54\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a89303de-1464-4c80-91dd-c9af0bc511f1\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a89303de-1464-4c80-91dd-c9af0bc511f1\",\"channelName\":\"(内部职位)程序员鼓励师 - 7975-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-26 18:01:26\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-26 18:01:26\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8930348-a35c-4667-98cf-3056c1d79b43\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8930348-a35c-4667-98cf-3056c1d79b43\",\"channelName\":\"产品经理-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-26 15:18:12\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-26 15:18:12\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a869036b-d7f1-445d-8c7e-c2265af15399\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a869036b-d7f1-445d-8c7e-c2265af15399\",\"channelName\":\"移交测试2-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-24 16:50:29\",\"latestMessage\":\"宏博：[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:56:39\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a891026e-fc59-4b0d-813b-d96ae2d17750\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a891026e-fc59-4b0d-813b-d96ae2d17750\",\"channelName\":\"发布市场测试-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-24 11:20:28\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-24 11:20:28\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a891026c-0f53-42bb-bac2-2c61359ee4a6\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a891026c-0f53-42bb-bac2-2c61359ee4a6\",\"channelName\":\"猎企发布测试1-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-24 11:17:16\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-24 11:17:16\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c066-40b7-9bf3-a55a71886eff\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c066-40b7-9bf3-a55a71886eff\",\"channelName\":\"(内部职位)程序员鼓励师 - 3-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-11 18:12:41\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c0d3-4a16-8099-a0cfebbb8b65\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c0d3-4a16-8099-a0cfebbb8b65\",\"channelName\":\"(内部职位)程序员鼓励师 - 9-阿里巴巴10\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-11 18:09:50\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c047-4175-91b1-f0ed1b487af4\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c047-4175-91b1-f0ed1b487af4\",\"channelName\":\"(内部职位)程序员鼓励师 - 1-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-11 18:08:13\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c19e-4c7c-a393-dc55137b7822\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c19e-4c7c-a393-dc55137b7822\",\"channelName\":\"(内部职位)程序员鼓励师 - 17-阿里巴巴11\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-11 18:01:57\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c269-4b6f-8f2c-f530bff199c2\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c269-4b6f-8f2c-f530bff199c2\",\"channelName\":\"(内部职位)程序员鼓励师 - 23-阿里巴巴5\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-11 17:26:32\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8800485-1daf-43fa-9711-3924d525e684\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a8800485-1daf-43fa-9711-3924d525e684\",\"channelName\":\"13800HR职位发布-八爪网络总部\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-02-07 21:04:04\",\"latestMessage\":\"小猎助手：[推进面试提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-02-07 21:03:53\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8690378-2baf-4b18-83f5-8636dea41e47\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8690378-2baf-4b18-83f5-8636dea41e47\",\"channelName\":\"热热-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":8,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 16:10:07\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 16:10:07\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8690363-427a-48af-ac66-fa3de1121807\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8690363-427a-48af-ac66-fa3de1121807\",\"channelName\":\"567-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:47:16\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:47:16\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a869035e-edf3-4571-93a3-82f9144a2916\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a869035e-edf3-4571-93a3-82f9144a2916\",\"channelName\":\"456-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:42:33\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:42:33\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a869035d-86fe-4293-b86e-f5eb08ad3551\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a869035d-86fe-4293-b86e-f5eb08ad3551\",\"channelName\":\"345-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:41:01\",\"latestMessage\":\"18800000008：[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:41:01\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8690350-eb9c-45b7-919a-e116a8d9110a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8690350-eb9c-45b7-919a-e116a8d9110a\",\"channelName\":\"日日日-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:27:14\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:27:14\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a869034e-5f3d-4041-9d89-6675c3d9df4b\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a869034e-5f3d-4041-9d89-6675c3d9df4b\",\"channelName\":\"移交测试-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:24:27\",\"latestMessage\":\"呈奇：[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:24:27\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8690347-96b5-4d05-9636-6eb86e92320a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8690347-96b5-4d05-9636-6eb86e92320a\",\"channelName\":\"zhiwei2-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":1,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 15:17:03\",\"latestMessage\":\"18800000008：[发布职位]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 15:17:03\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a869030c-64ee-44fe-aea0-d60530d7c418\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a869030c-64ee-44fe-aea0-d60530d7c418\",\"channelName\":\"职位1-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":4,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-01-15 14:12:25\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"0001-01-01 00:00:00\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-01-15 14:12:25\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8470414-33a5-47f4-b8bf-5ec837219857\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8470414-33a5-47f4-b8bf-5ec837219857\",\"channelName\":\"测试工程师1-NANA创建\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-12 19:00:32\",\"latestMessage\":\"[候选人链接]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-12 19:00:32\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8470410-a146-4e85-863f-2a990762b71c\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8470410-a146-4e85-863f-2a990762b71c\",\"channelName\":\"zhiwei134-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-12 18:56:40\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-12 18:56:40\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8470369-5fa4-43cb-971d-d4b664fa34e0\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8470369-5fa4-43cb-971d-d4b664fa34e0\",\"channelName\":\"测试工程师-阿里巴巴0\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-12 15:53:57\",\"latestMessage\":\"[发布职位]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-12 15:53:57\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a8470362-0da0-4228-821f-02d65c63ff93\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a8470362-0da0-4228-821f-02d65c63ff93\",\"channelName\":\"20117.12.12-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-12 15:45:59\",\"latestMessage\":\"宏博：[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-12 15:45:59\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c2a8-4d5f-a9c9-bb3f3a48122a\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c2a8-4d5f-a9c9-bb3f3a48122a\",\"channelName\":\"(内部职位)程序员鼓励师 - 25-阿里巴巴19\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-07 17:20:11\",\"latestMessage\":\"[加入频道]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a841031a-1ccb-4cb6-ada7-8808cefbfafd\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a841031a-1ccb-4cb6-ada7-8808cefbfafd\",\"channelName\":\"2017.12.06职位1-公司1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-06 14:27:23\",\"latestMessage\":\"[HR反馈提醒]\",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-06 14:27:23\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c1be-4c19-941e-73a13313967f\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c1be-4c19-941e-73a13313967f\",\"channelName\":\"(内部职位)程序员鼓励师 - 18-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"1604738167 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c1dd-4e4d-bd1d-a905329caac3\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c1dd-4e4d-bd1d-a905329caac3\",\"channelName\":\"(内部职位)程序员鼓励师 - 19-阿里巴巴7\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"321765403 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c20c-4361-b83e-e05bb966c49c\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c20c-4361-b83e-e05bb966c49c\",\"channelName\":\"(内部职位)程序员鼓励师 - 20-阿里巴巴14\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"644341707 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c22b-4d73-b3a6-c26afbd80928\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c22b-4d73-b3a6-c26afbd80928\",\"channelName\":\"(内部职位)程序员鼓励师 - 21-阿里巴巴11\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"473611613 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:06\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c085-4a5e-bc41-26276dbc2746\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c085-4a5e-bc41-26276dbc2746\",\"channelName\":\"(内部职位)程序员鼓励师 - 5-阿里巴巴1\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"1938540408 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c0a4-4dca-863f-7ae10b46aee0\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c0a4-4dca-863f-7ae10b46aee0\",\"channelName\":\"(内部职位)程序员鼓励师 - 6-阿里巴巴9\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"1985445160 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c0b4-47ec-951c-ac7b5776fdab\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c0b4-47ec-951c-ac7b5776fdab\",\"channelName\":\"(内部职位)程序员鼓励师 - 7-阿里巴巴18\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"26177088 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c0c4-49d0-98ac-b74ac5a7bb4c\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c0c4-49d0-98ac-b74ac5a7bb4c\",\"channelName\":\"(内部职位)程序员鼓励师 - 8-阿里巴巴10\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"809646886 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c056-48ec-8719-e8e898ecad15\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c056-48ec-8719-e8e898ecad15\",\"channelName\":\"(内部职位)程序员鼓励师 - 2-阿里巴巴7\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"1382666688 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c027-4f25-b96d-1a83b1b20a04\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c027-4f25-b96d-1a83b1b20a04\",\"channelName\":\"(内部职位)程序员鼓励师 - 0-阿里巴巴14\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"405728561 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c0f2-4951-a7f9-9dff2b88f322\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c0f2-4951-a7f9-9dff2b88f322\",\"channelName\":\"(内部职位)程序员鼓励师 - 10-阿里巴巴3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"983144438 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c102-4328-b310-817ba4664b6d\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c102-4328-b310-817ba4664b6d\",\"channelName\":\"(内部职位)程序员鼓励师 - 11-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"1273711849 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c112-4d7c-8bef-eef82c6e0a13\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c112-4d7c-8bef-eef82c6e0a13\",\"channelName\":\"(内部职位)程序员鼓励师 - 12-阿里巴巴3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"2022859038 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c131-4ffb-ae4c-84d1111d6aa8\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c131-4ffb-ae4c-84d1111d6aa8\",\"channelName\":\"(内部职位)程序员鼓励师 - 13-阿里巴巴3\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"727335326 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-28 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c150-4d0b-aa55-19fdf3b6d0f2\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c150-4d0b-aa55-19fdf3b6d0f2\",\"channelName\":\"(内部职位)程序员鼓励师 - 14-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"779896062 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-25 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c160-4651-984a-6e4b5378c1b7\",\"isPublic\":false,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c160-4651-984a-6e4b5378c1b7\",\"channelName\":\"(内部职位)程序员鼓励师 - 15-阿里巴巴6\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"779549113 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-c17f-4f48-b88f-98291e977429\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":false,\"channelId\":\"a83c0366-c17f-4f48-b88f-98291e977429\",\"channelName\":\"(内部职位)程序员鼓励师 - 16-阿里巴巴2\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-12-01 15:51:13\",\"latestMessage\":\"367347872 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":1,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-12-01 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-bf4d-4a73-b06c-89c35c60b956\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a83c0366-bf4d-4a73-b06c-89c35c60b956\",\"channelName\":\"软件开发工程师 - 11-蜘蛛网络\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-11-30 13:51:13\",\"latestMessage\":\"傲露：2027924299 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-bf3d-452f-aade-555e5464f9bf\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a83c0366-bf3d-452f-aade-555e5464f9bf\",\"channelName\":\"软件开发工程师 - 7-蜘蛛网络\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-11-30 12:51:13\",\"latestMessage\":\"傲露：1218994845 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"location\":\"深圳市\",\"jobUrl\":\"/Job/a83c0366-bf2d-4ce3-b098-4057152b1aa5\",\"isPublic\":true,\"isBlack\":false,\"needSellingPoints\":false,\"isNeedGetOrder\":false,\"isMarketJob\":true,\"channelId\":\"a83c0366-bf2d-4ce3-b098-4057152b1aa5\",\"channelName\":\"软件开发工程师 - 3-蜘蛛网络\",\"category\":20,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2017-11-30 11:51:13\",\"latestMessage\":\"傲露：607739568 这个职位大有钱途，请大家努力做！ \",\"lastReadTime\":\"2018-05-23 18:02:31\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2017-11-22 15:51:05\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false}],\"succeeded\":true,\"message\":null}"
+				},
+				{
+					"name": "获取普通群列表",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "__RequestVerificationToken=3gdjBIAtXuefr32NrL7mOo7aPoEER6HHIbK1TND3qyZHs3jWEXvRCNTK_ffO7eEEp-ZMKqHoCUXjk2y3un7dVVZ0zCw1; UPASessionId=324872c8-145c-41c2-be08-2b9a44c86c71; .LieBiDeAuth=-26mYp25psV_ucRH5TWJRj4mxb7DQC3_fdwPeV8mV3ZMwMYxWKvORotzBs-lb0edZJ-cQoNfEidMiACYzgRLGgjXXOxvrDl0Btkq0wrcPp2hmZkwVC3Q5QYeNltbvQMoA1PkV_3mHkEmMdM1YVbEtmjk3pwNpf_RhdEWSL-UnVVT16ip9IduvIdGGFOp_y7VvRMtiJ3tUneSDO0HqITqUevJLqkyO226H4YKLHGEU94Rblxt4JjOyH1SzsjlvLuQODbMIvRLUYnV70lYCsk6dW9AJsG3cFgztK5XGl--WriH3JP4x3tpoHqlJmL6sEpcP_toc3WXuFHsnSdSkgtKxkna44Aar9epsr1gEbFOOrqukSBXEtx9djy7_0fWgxlHmWuMum6SewqwuRi5Whm-ewuaHYU-PlofunXWLjjJLyT1oqLg6yfrjK0nIfAvYv7a--Y2IxVvq8FO9iKMn47Mfp_wUOlJ1jjQ4JkB9306wFDVy0rU; LatestLoginedDate=2018-08-15; _ga=GA1.1.a83c0366-a433-47ac-b6e8-2db5b96e67b3; _gid=GA1.1.1529353264.1534150569; Hm_lvt_34a6434d46a009fe8be51621c402c62f=1533550324,1533798824,1533882774,1534298203; Hm_lpvt_34a6434d46a009fe8be51621c402c62f=1534301838; _gat=1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:17984/ChannelCategorys/21/Channels",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "17984",
+							"path": [
+								"ChannelCategorys",
+								"21",
+								"Channels"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4317",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "frame-ancestors 'self' http://www.growingio.com",
+							"name": "Content-Security-Policy",
+							"description": "Custom header"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 15 Aug 2018 08:07:18 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "RequestId",
+							"value": "a93d0375-9751-46aa-8829-1d217cab2d18",
+							"name": "RequestId",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-AspNetMvc-Version",
+							"value": "5.2",
+							"name": "X-AspNetMvc-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpc5bel5L2cXEdpdFxXZWJTaXRlXOeMjuW/heW+l1xsaWViaWRlLnBvcnRhbC5kZXZcaW1wbGVtZW50YXRpb25cc3JjXEJhemEuTGllQmlEZS5Qb3J0YWxcQ2hhbm5lbENhdGVnb3J5c1wyMVxDaGFubmVscw==?=",
+							"name": "X-SourceFiles",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "2018-08-15",
+							"key": "LatestLoginedDate"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "CMvzQhoNbTPKYvjLXA5uewKEHtr8MkN0TaglkHK9LLcIqzMfi7MMkDEiK77YIlt39BHxqN7oYMmJttdWZpl2WfWkJsxd5ihHS3mvkT0dkwG63UtYF2-8tnrzo1QC0Zw98Uzoyru-cMKszCy84tMjz0ZTHoqnsCSfqnBtTPck1C0NMdJiKqtuoQiUHHy1CFf0LDT5HC9FFL0Ag8T5eN--qKJ00_5lUFsCqs_m1Y8d-aJkKcApOpoTlD9HE63ZWU2iBjV5S2xQVXoqB3ds-ESstB4afxvQhI54Kk-K825W4GleZ4sb03swhh3IbObcy3L-H0KSgSZM-FBOj8D5m4HMeG7hmrqk_kY1wotCo_7JmBpZ0XHzwWv_LRf8uHQDU1lvS6bCwlzB1X-2XSmVuu7n5qSU4wYAvQb7MwfHLdKJemnqmdG5RMHgtq3FhtYnln3UThBm_A4EMTk2VrC8azKk5dHmp-mTTcRF9GATGRVsUreY_eKK",
+							"key": ".LieBiDeAuth"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "824fe370-4173-4a25-af66-64cabaf2ec62",
+							"key": "UPASessionId"
+						}
+					],
+					"body": "{\"data\":[{\"channelId\":\"a93c04b4-ddff-4a6b-a8a1-2ec871243840\",\"channelName\":\"陈翔\",\"category\":21,\"isGroup\":false,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 21:56:58\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-15 10:19:01\",\"userCount\":0,\"avatarId\":\" \",\"avatarUrl\":\"http://localhost:17984/Data/Avatar/%20\",\"created\":\"2018-08-14 21:56:02\",\"nickname\":\"18874738892\",\"firmName\":\"慧眼猎头\",\"title\":\" \",\"isSystem\":false},{\"channelId\":\"a93c042c-e031-451f-8e63-15232272bd66\",\"channelName\":\"测试群3\",\"category\":21,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 21:39:43\",\"latestMessage\":\"大家好！\",\"lastReadTime\":\"2018-08-15 11:10:35\",\"userCount\":3,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-14 19:27:29\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"channelId\":\"a9350498-5769-47e3-8f19-507f5ac8e27d\",\"channelName\":\"测试群\",\"category\":21,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:49:08\",\"latestMessage\":\"[私信]\",\"lastReadTime\":\"2018-08-14 20:02:39\",\"userCount\":4,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-07 21:24:52\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"channelId\":\"a93b038c-15f5-4892-b50d-75c6c6a6b82e\",\"channelName\":\"测试群2\",\"category\":21,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:48:17\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-15 11:10:32\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-13 16:31:52\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"channelId\":\"a93c0430-93d8-4e20-a36f-45a3e1b2dced\",\"channelName\":\"测试群5\",\"category\":21,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:31:32\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-14 21:54:17\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-14 19:31:32\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"channelId\":\"a93c042f-e16c-4ecf-86f6-7ea6e8a4ea1a\",\"channelName\":\"测试群4\",\"category\":21,\"isGroup\":true,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:30:46\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-15 11:10:35\",\"userCount\":2,\"avatarId\":\"\",\"avatarUrl\":\"http://localhost:17984/Static/Images/defaultUser.png\",\"created\":\"2018-08-14 19:30:46\",\"nickname\":null,\"firmName\":null,\"title\":null,\"isSystem\":false},{\"channelId\":\"a93c0429-6e2d-42d7-a811-1e11c020209a\",\"channelName\":\"宏博\",\"category\":21,\"isGroup\":false,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 19:23:44\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-15 11:10:33\",\"userCount\":0,\"avatarId\":\"a83c0366-982d-4f4d-a9a0-c1cf0011df57\",\"avatarUrl\":\"http://localhost:17984/Data/Avatar/a83c0366-982d-4f4d-a9a0-c1cf0011df57\",\"created\":\"2018-08-14 19:23:44\",\"nickname\":\"a13900139002\",\"firmName\":\"科锐福克斯分部1\",\"title\":\"猎头\",\"isSystem\":false},{\"channelId\":\"a93c03a2-2d01-4554-9e19-384bbeb8b352\",\"channelName\":\"小猎助手\",\"category\":21,\"isGroup\":false,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-14 16:56:00\",\"latestMessage\":\"[系统消息]\",\"lastReadTime\":\"2018-08-15 11:10:33\",\"userCount\":0,\"avatarId\":\"a83c0366-9cb1-4def-8cf6-53477e1ff203\",\"avatarUrl\":\"http://localhost:17984/Data/Avatar/a83c0366-9cb1-4def-8cf6-53477e1ff203\",\"created\":\"2018-08-14 16:56:00\",\"nickname\":\"13900999003\",\"firmName\":\"系统内置公司\",\"title\":\"\",\"isSystem\":true},{\"channelId\":\"a93003b6-00e5-458d-bec3-385607054e55\",\"channelName\":\"听丝\",\"category\":21,\"isGroup\":false,\"newMessageNum\":0,\"isNoDisturb\":false,\"latestMessageTime\":\"2018-08-13 13:46:52\",\"latestMessage\":\"[候选人链接]\",\"lastReadTime\":\"2018-08-15 11:10:31\",\"userCount\":0,\"avatarId\":\"a83c0366-92ed-428c-8be3-bdbdb86cff18\",\"avatarUrl\":\"http://localhost:17984/Data/Avatar/a83c0366-92ed-428c-8be3-bdbdb86cff18\",\"created\":\"2018-08-02 17:17:39\",\"nickname\":\"13900139001\",\"firmName\":\"科锐福克斯分部1\",\"title\":\"qa\",\"isSystem\":false}],\"succeeded\":true,\"message\":null}"
+				}
+			]
+		},
+		{
+			"name": "社区-搜索名字、昵称（pro）-step1",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cec42b15-aaba-415f-bd8f-621b6e594623",
+						"exec": [
+							"\r",
+							"pm.environment.set(\"keyword\", \"运营\");\r",
+							"\r",
+							"// pm.environment.set(\"keyword\", data.name);\r",
+							"// console.log(data.name);\r",
+							"\r",
+							"\r",
+							"// postman.setEnvironmentVariable(\"keyword\", (\"0000\" + (Math.random()*Math.pow(36,4) << 0).toString(36)).slice(-4));\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3e1a3893-5543-43f2-87fe-8ef8f4cdb962",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"true\");\r",
+							"});\r",
+							"\r",
+							"// pm.test(\"将返回值的realname设置为环境变量\", function(){\r",
+							"//     var data = JSON.parse(responseBody);\r",
+							"//     pm.environment.set(\"name\", data.data[0].realName);\r",
+							"// }); \r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableUrlEncoding": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/User/SearchUser?keyword={{keyword}}&searchScope=10",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"User",
+						"SearchUser"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "{{keyword}}"
+						},
+						{
+							"key": "searchScope",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "搜索名字、昵称",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "__RequestVerificationToken=iZlrTdebS44uv41GC6kg3eul_gONLsTxJnI9noi1aWZZFXlig12KfxrIQLyWOpDU52wlr6Fmw6Ansp5qvQIEA6ojz_o1; UPASessionId=c104b0a2-1b52-4270-9c04-f6f29f398ffb; .LieBiDeAuth=7qGjDRz0y-loQ7c1OeB3FKiMBx1zbFPCarK95fQzbFxq9ss1gUxjW5ERRkSYZs3K2WHg-Tg7uq90ELFnMLhe2fnzGnrVUi4ZhuL7WEo5VaIM2ifaVlnOO7SkjcDb32WhkI4nvTgpZY051JnjO6766iWO6IN9v61RReyw8DFobwrUDm5_bkH9IkMF3H-YRm7T_ypOMHKwD2srg1f7dgPIBbmL2WL8QLfShKrB7Uf3dkRA1WDmToV1Pwjd2hylRRuh9xxnaUlftu63nh1kR4doIgvxFDfdX_sPWSv9_kpZl-MNkTw7J_92klroCUz-BGAi8VrbJKIltQKPTFTwVjenitpwU2WUoMI2M05P-nWItOsVCw-CIgvmJXmJmut_awmIyxdfGpEv12WB8NHEFUe-pvZpxmliG-FReWeTdBL80cR2yHjf3bkkRThpF8Gzt_Stb26w5VrubrrMvdhsy2Syr-vk7E6WZYO6D1Fs6FDm1WtTEvv8; LatestLoginedDate=2018-08-08; _ga=GA1.1.a83c0366-a433-47ac-b6e8-2db5b96e67b3; _gid=GA1.1.945939428.1533648833; _gat=1; Hm_lvt_34a6434d46a009fe8be51621c402c62f=1533550324; Hm_lpvt_34a6434d46a009fe8be51621c402c62f=1533710388"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:17984/User/SearchUser?keyword=1&searchScope=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "17984",
+							"path": [
+								"User",
+								"SearchUser"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "1"
+								},
+								{
+									"key": "searchScope",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2126",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "frame-ancestors 'self' http://www.growingio.com",
+							"name": "Content-Security-Policy",
+							"description": "Custom header"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Aug 2018 05:45:52 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "RequestId",
+							"value": "a93702f4-1b3e-4375-afec-89fbb927e8f8",
+							"name": "RequestId",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "LatestLoginedDate=2018-08-09; path=/; expires=Thu, 16-Aug-2018 00:00:00 GMT",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-AspNetMvc-Version",
+							"value": "5.2",
+							"name": "X-AspNetMvc-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpc5bel5L2cXEdpdFxXZWJTaXRlXOeMjuW/heW+l1xsaWViaWRlLnBvcnRhbC5kZXZcaW1wbGVtZW50YXRpb25cc3JjXEJhemEuTGllQmlEZS5Qb3J0YWxcVXNlclxTZWFyY2hVc2Vy?=",
+							"name": "X-SourceFiles",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "2018-08-09",
+							"key": "LatestLoginedDate"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "MwqZv5tq7sP9ARUKj7Cd8wTLrRnA2by5NlAdJsCGPkEbZtbQJHOkbrcB-SLkAJZL2m7MFdHZ_8F36l6Vo5338mOyDte12Y1D22zIbYdrGgARPu_AocwVdd_HH124xCXCVy6Srs8yf0PMyoDXYk1iG3j5qEIjPlb97oueeYRIbsWMff32wQ5YvhsKyStvyDC0N5wsKHUY_D0POzhEai2esDEyId635xEDcHgh71wk5VciiJcslZOawXvlNvEK6gyvXlW2Xswixny13sHSEEWZfroMe0HmsmWCEc6bRWj4Q-Y3kGM3j7VINgznAHB6LzgYSzDBgCr6Mf2Mc1jdxOVyMVoaIxC_Q3GkubzaXp-RvtHaDzxoPT9nggDrKe6XQMfGmI-5fNBAGVnqUaz4uzyF1dERyvwGnDfgbKMwmEvUW2R8yDWLsIhlaWU13AIXeJAJcgC08IZPN-b44h8171Gu7pb04AVi_UOHQMb90LZcthDMA5k8",
+							"key": ".LieBiDeAuth"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "824fe370-4173-4a25-af66-64cabaf2ec62",
+							"key": "UPASessionId"
+						}
+					],
+					"body": "{\"data\":[{\"id\":\"00000000-0000-0000-0000-000000000003\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9cb1-4def-8cf6-53477e1ff203\",\"realName\":\"小猎助手\",\"nickname\":\"13900999003\",\"identityType\":0,\"isOnline\":true},{\"id\":\"a83c0366-a433-4101-9bb9-17803c8be784\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-937a-4986-9441-da196d98e0fa\",\"realName\":\"傲露\",\"nickname\":\"13800138001\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a433-47ac-b6e8-2db5b96e67b3\",\"avatar\":\"http://localhost:17984/Data/Avatar/a8cd039b-9fed-4c92-83c6-5bf14707d4d4\",\"realName\":\"碧秋\",\"nickname\":\"13900139000\",\"identityType\":2,\"isOnline\":true},{\"id\":\"a83c0366-a433-4822-b9f8-55a6bfa1f277\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9203-46cd-9234-2c9609b83e7a\",\"realName\":\"觅烟\",\"nickname\":\"13800138000\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a433-4b06-8ca9-70ccc95e399c\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-92ed-428c-8be3-bdbdb86cff18\",\"realName\":\"听丝\",\"nickname\":\"13900139001\",\"identityType\":2,\"isOnline\":false},{\"id\":\"a83c0366-a954-41b4-ad3f-ece9d111f36a\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93c8-4fc2-8ef9-f46de0d02f3c\",\"realName\":\"范明\",\"nickname\":\"13800138002\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a992-4ae8-ba0b-966a8e0b51a4\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93e7-4a4f-a26b-8460c4984a66\",\"realName\":\"函宇\",\"nickname\":\"13800138003\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a9e0-4c0e-9c57-2581a07bf6ba\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93f7-45eb-b142-9374bfcbfee5\",\"realName\":\"承和\",\"nickname\":\"13800138004\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-aa1f-49b9-afcc-53a52a2c3f45\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9435-49fb-aa50-49669043fc51\",\"realName\":\"灵曼\",\"nickname\":\"13800138005\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-aa6d-4f4c-9754-9ee97b119de5\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9455-409b-8cbe-fd36da9d9687\",\"realName\":\"安梅\",\"nickname\":\"13800138006\",\"identityType\":1,\"isOnline\":false}],\"succeeded\":true,\"message\":null}"
+				}
+			]
+		},
+		{
+			"name": "社区-搜索名字、昵称（pro） -step2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dcb2be2d-2d75-4f2c-aaa6-34c21aeb686f",
+						"exec": [
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"var na=pm.environment.get(\"name\");\r",
+							"console.log(\"搜索关键字为：\"+na);\r",
+							"\r",
+							"\r",
+							"pm.test(\"返回匹配项\", function () {\r",
+							"    // var data = pm.response.json\r",
+							"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "46374b35-fd77-4837-88a8-5f72f0a0cef6",
+						"exec": [
+							"\r",
+							"// pm.environment.set(\"keyword\", \"测试\");\r",
+							"// pm.environment.get(\"name\");\r",
+							"// pm.variables.get(\"variable_key\");\r",
+							"\r",
+							"pm.environment.set(\"keyword\", data.name);\r",
+							"console.log(data.name);\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followRedirects": true,
+				"disableUrlEncoding": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/User/SearchUser?keyword={{name}}&searchScope=3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"User",
+						"SearchUser"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "{{name}}"
+						},
+						{
+							"key": "searchScope",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "搜索名字、昵称",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "__RequestVerificationToken=iZlrTdebS44uv41GC6kg3eul_gONLsTxJnI9noi1aWZZFXlig12KfxrIQLyWOpDU52wlr6Fmw6Ansp5qvQIEA6ojz_o1; UPASessionId=c104b0a2-1b52-4270-9c04-f6f29f398ffb; .LieBiDeAuth=7qGjDRz0y-loQ7c1OeB3FKiMBx1zbFPCarK95fQzbFxq9ss1gUxjW5ERRkSYZs3K2WHg-Tg7uq90ELFnMLhe2fnzGnrVUi4ZhuL7WEo5VaIM2ifaVlnOO7SkjcDb32WhkI4nvTgpZY051JnjO6766iWO6IN9v61RReyw8DFobwrUDm5_bkH9IkMF3H-YRm7T_ypOMHKwD2srg1f7dgPIBbmL2WL8QLfShKrB7Uf3dkRA1WDmToV1Pwjd2hylRRuh9xxnaUlftu63nh1kR4doIgvxFDfdX_sPWSv9_kpZl-MNkTw7J_92klroCUz-BGAi8VrbJKIltQKPTFTwVjenitpwU2WUoMI2M05P-nWItOsVCw-CIgvmJXmJmut_awmIyxdfGpEv12WB8NHEFUe-pvZpxmliG-FReWeTdBL80cR2yHjf3bkkRThpF8Gzt_Stb26w5VrubrrMvdhsy2Syr-vk7E6WZYO6D1Fs6FDm1WtTEvv8; LatestLoginedDate=2018-08-08; _ga=GA1.1.a83c0366-a433-47ac-b6e8-2db5b96e67b3; _gid=GA1.1.945939428.1533648833; _gat=1; Hm_lvt_34a6434d46a009fe8be51621c402c62f=1533550324; Hm_lpvt_34a6434d46a009fe8be51621c402c62f=1533710388"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:17984/User/SearchUser?keyword=1&searchScope=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "17984",
+							"path": [
+								"User",
+								"SearchUser"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "1"
+								},
+								{
+									"key": "searchScope",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2126",
+							"name": "Content-Length",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"key": "Content-Security-Policy",
+							"value": "frame-ancestors 'self' http://www.growingio.com",
+							"name": "Content-Security-Policy",
+							"description": "Custom header"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 09 Aug 2018 05:45:52 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "RequestId",
+							"value": "a93702f4-1b3e-4375-afec-89fbb927e8f8",
+							"name": "RequestId",
+							"description": "Custom header"
+						},
+						{
+							"key": "Server",
+							"value": "Microsoft-IIS/10.0",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "LatestLoginedDate=2018-08-09; path=/; expires=Thu, 16-Aug-2018 00:00:00 GMT",
+							"name": "Set-Cookie",
+							"description": "an HTTP cookie"
+						},
+						{
+							"key": "X-AspNet-Version",
+							"value": "4.0.30319",
+							"name": "X-AspNet-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-AspNetMvc-Version",
+							"value": "5.2",
+							"name": "X-AspNetMvc-Version",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "ASP.NET",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						},
+						{
+							"key": "X-SourceFiles",
+							"value": "=?UTF-8?B?RDpc5bel5L2cXEdpdFxXZWJTaXRlXOeMjuW/heW+l1xsaWViaWRlLnBvcnRhbC5kZXZcaW1wbGVtZW50YXRpb25cc3JjXEJhemEuTGllQmlEZS5Qb3J0YWxcVXNlclxTZWFyY2hVc2Vy?=",
+							"name": "X-SourceFiles",
+							"description": "Custom header"
+						}
+					],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "2018-08-09",
+							"key": "LatestLoginedDate"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": true,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "MwqZv5tq7sP9ARUKj7Cd8wTLrRnA2by5NlAdJsCGPkEbZtbQJHOkbrcB-SLkAJZL2m7MFdHZ_8F36l6Vo5338mOyDte12Y1D22zIbYdrGgARPu_AocwVdd_HH124xCXCVy6Srs8yf0PMyoDXYk1iG3j5qEIjPlb97oueeYRIbsWMff32wQ5YvhsKyStvyDC0N5wsKHUY_D0POzhEai2esDEyId635xEDcHgh71wk5VciiJcslZOawXvlNvEK6gyvXlW2Xswixny13sHSEEWZfroMe0HmsmWCEc6bRWj4Q-Y3kGM3j7VINgznAHB6LzgYSzDBgCr6Mf2Mc1jdxOVyMVoaIxC_Q3GkubzaXp-RvtHaDzxoPT9nggDrKe6XQMfGmI-5fNBAGVnqUaz4uzyF1dERyvwGnDfgbKMwmEvUW2R8yDWLsIhlaWU13AIXeJAJcgC08IZPN-b44h8171Gu7pb04AVi_UOHQMb90LZcthDMA5k8",
+							"key": ".LieBiDeAuth"
+						},
+						{
+							"expires": "Invalid Date",
+							"httpOnly": false,
+							"domain": "localhost",
+							"path": "/",
+							"secure": false,
+							"value": "824fe370-4173-4a25-af66-64cabaf2ec62",
+							"key": "UPASessionId"
+						}
+					],
+					"body": "{\"data\":[{\"id\":\"00000000-0000-0000-0000-000000000003\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9cb1-4def-8cf6-53477e1ff203\",\"realName\":\"小猎助手\",\"nickname\":\"13900999003\",\"identityType\":0,\"isOnline\":true},{\"id\":\"a83c0366-a433-4101-9bb9-17803c8be784\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-937a-4986-9441-da196d98e0fa\",\"realName\":\"傲露\",\"nickname\":\"13800138001\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a433-47ac-b6e8-2db5b96e67b3\",\"avatar\":\"http://localhost:17984/Data/Avatar/a8cd039b-9fed-4c92-83c6-5bf14707d4d4\",\"realName\":\"碧秋\",\"nickname\":\"13900139000\",\"identityType\":2,\"isOnline\":true},{\"id\":\"a83c0366-a433-4822-b9f8-55a6bfa1f277\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9203-46cd-9234-2c9609b83e7a\",\"realName\":\"觅烟\",\"nickname\":\"13800138000\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a433-4b06-8ca9-70ccc95e399c\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-92ed-428c-8be3-bdbdb86cff18\",\"realName\":\"听丝\",\"nickname\":\"13900139001\",\"identityType\":2,\"isOnline\":false},{\"id\":\"a83c0366-a954-41b4-ad3f-ece9d111f36a\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93c8-4fc2-8ef9-f46de0d02f3c\",\"realName\":\"范明\",\"nickname\":\"13800138002\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a992-4ae8-ba0b-966a8e0b51a4\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93e7-4a4f-a26b-8460c4984a66\",\"realName\":\"函宇\",\"nickname\":\"13800138003\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-a9e0-4c0e-9c57-2581a07bf6ba\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-93f7-45eb-b142-9374bfcbfee5\",\"realName\":\"承和\",\"nickname\":\"13800138004\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-aa1f-49b9-afcc-53a52a2c3f45\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9435-49fb-aa50-49669043fc51\",\"realName\":\"灵曼\",\"nickname\":\"13800138005\",\"identityType\":1,\"isOnline\":false},{\"id\":\"a83c0366-aa6d-4f4c-9754-9ee97b119de5\",\"avatar\":\"http://localhost:17984/Data/Avatar/a83c0366-9455-409b-8cbe-fd36da9d9687\",\"realName\":\"安梅\",\"nickname\":\"13800138006\",\"identityType\":1,\"isOnline\":false}],\"succeeded\":true,\"message\":null}"
+				}
+			]
+		},
+		{
+			"name": "LBD-人才池",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1ab38efe-b234-42b3-a3f6-9e82f2d8abce",
+						"exec": [
+							"\r",
+							"// var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"// tests['check response total value 判断总数是否为某值'] = jsonData.data.total ===684;\r",
+							"\r",
+							"// pm.test('判断data中canGrabCount数据为341' , function(){   \r",
+							"//   var jsonData = pm.response.json();\r",
+							"//   pm.expect(jsonData.data.canGrabCount).to.eql(341);\r",
+							"// });\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"true\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"startDate\": \"2020-08-06\",\r\n    \"enDateTime\": \"2020-09-05 00:00:00\",\r\n    \"locations\": [],\r\n    \"labels\": [],\r\n    \"degree\": [],\r\n    \"yearOfExperienceRegion\": [],\r\n    \"workExperienceCompaniesName\": [],\r\n    \"educationTags\": [],\r\n    \"isJobHunting\": false,\r\n    \"canGrab\": false,\r\n    \"isTrackingList\": false,\r\n    \"addTrackingListSource\": [],\r\n    \"latestOperationType\": [],\r\n    \"currentAggregationType\": -1,\r\n    \"start\": 0,\r\n    \"take\": 30,\r\n    \"sort\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/Headhunting/TalentPool/Search",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"Headhunting",
+						"TalentPool",
+						"Search"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "{\"startDate\":\"2020-08-06\",\"enDateTime\":\"2020-09-05 00:00:00\",\"locations\":[],\"labels\":[],\"degree\":[],\"yearOfExperienceRegion\":[],\"workExperienceCompaniesName\":[],\"educationTags\":[],\"isJobHunting\":false,\"canGrab\":false,\"isTrackingList\":false,\"addTrackingListSource\":[],\"latestOperationType\":[],\"currentAggregationType\":-1,\"start\":0,\"take\":30,\"sort\":0}",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
